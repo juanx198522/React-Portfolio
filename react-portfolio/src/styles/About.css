@@ -1,0 +1,33 @@
+.about {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    /* Use min-height instead of fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    /* Center vertically */
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: #f0f0f0;
+}
+
+.about h2 {
+    font-size: 80px;
+    color: #e9d35b;
+    margin: 40px 0;
+    /* Adjust margin for spacing */
+}
+
+.about p {
+    color: black;
+
+    margin: 40px;
+    /* Adjust margin for spacing */
+}
+
+@media only screen and (max-width: 600px) {
+    .about h2 {
+        font-size: 40px;
+    }
+}
