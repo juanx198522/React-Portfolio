@@ -26,7 +26,8 @@ function Resume() {
 
     return (
         <div className='resume'>
-            <h2>Resume</h2>
+            <h1>Resume</h1>
+            <br></br>
             <h3>
                 Download my{' '}
                 <span className="hover-effect">
@@ -35,12 +36,16 @@ function Resume() {
                     </a>
                 </span>
             </h3>
+            <br></br>
+
             <h3>Front-end Proficiencies:</h3>
             <ul>
                 {frontendProficiencies.map((proficiency, index) => (
                     <li key={index}>{proficiency}</li>
                 ))}
             </ul>
+            <br></br>
+
             <h3>Back-end Proficiencies:</h3>
             <ul>
                 {backendProficiencies.map((proficiency, index) => (

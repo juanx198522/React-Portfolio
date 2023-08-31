@@ -1,11 +1,9 @@
-.resume {
+/* .resume {
   width: 100%;
   min-height: calc(100vh - 100px);
-  /* Use min-height instead of fixed height */
   display: flex;
   flex-direction: column;
   justify-content: top;
-  /* Center vertically */
   align-items: center;
   text-align: center;
   background-color: white;
@@ -16,22 +14,17 @@
   font-size: 80px;
   color: #e9d35b;
   margin: 40px 0;
-  /* Adjust margin for spacing */
 }
 
 .resume h3 li {
   color: black;
   margin: 0px;
-  /* Adjust margin for spacing */
 }
 
 .resume ul {
   list-style-type: none;
-  /* Remove bullet points */
   margin-left: 0;
-  /* Remove default left margin */
   padding-left: 0;
-  /* Remove default left padding */
 }
 
 .resume li {
@@ -41,20 +34,55 @@
 
 .hover-effect a {
   color: blue;
-  /* Change the text color to blue on hover */
   text-decoration: none;
-  /* Remove underline */
   cursor: pointer;
-  /* Change cursor to a pointer on hover */
 }
 
 .hover-effect a:hover {
   text-decoration: underline;
-  /* Add underline on hover */
 }
 
 @media only screen and (max-width: 600px) {
   .about h2 {
     font-size: 40px;
   }
+} */
+
+/* Resume.css */
+.resume {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
 }
+
+.resume h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.resume .hover-effect a {
+  text-decoration: none; /* Remove underlines */
+  color: #0074d9; /* Link color */
+  transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+.resume .hover-effect a:hover {
+  color: #0056b3; /* Hover color */
+}
+
+.resume ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume ul li {
+  margin-bottom: 5px;
+}
+
+/* You can add additional styles as needed */
