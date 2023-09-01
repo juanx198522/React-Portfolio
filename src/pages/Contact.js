@@ -1,124 +1,151 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "../styles/Contact.css";
 
 function Contact() {
-  // State to manage form inputs
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  // Set initial state for name, email, message, and form errors
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
-  // State to manage form validation errors
-  const [errors, setErrors] = useState({});
-
-  // Function to handle form input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  // Handle name input changes
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    setNameError(false);
   };
 
-  // Function to handle form submission
+  // Handle email input changes
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailError(false);
+  };
+
+  // Handle message input changes
+  const handleMsgChange = (e) => {
+    setMessage(e.target.value);
+    setMessageError(false);
+  };
+
+  // Validate email format using regex
+  const validateEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    let valid = true;
 
-    // Initialize errors object
-    const newErrors = {};
-
-    // Check if name is empty
-    if (formData.name.trim() === '') {
-      newErrors.name = 'Name is required';
+    // Validate input fields and set errors if necessary
+    if (name.length <= 1) {
+      setNameError(true);
+      valid = false;
+    }
+    if (!validateEmail(email)) {
+      setEmailError(true);
+      valid = false;
+    }
+    if (message.length < 150) {
+      setMessageError(true);
+      valid = false;
     }
 
-    // Check if email is empty or invalid
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (formData.email.trim() === '') {
-      newErrors.email = 'Email is required';
-    } else if (!emailPattern.test(formData.email)) {
-      newErrors.email = 'Invalid email address';
-    }
-
-    // Check if message is empty
-    if (formData.message.trim() === '') {
-      newErrors.message = 'Message is required';
-    }
-
-    // Update errors state
-    setErrors(newErrors);
-
-    // If there are no errors, you can proceed with form submission
-    if (Object.keys(newErrors).length === 0) {
-      // Implement your form submission logic here
+    // If all fields are valid, log form data and reset inputs
+    if (valid) {
+      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+      setName("");
+      setEmail("");
+      setMessage("");
+      setMessageSent(true);
     }
   };
 
+  // Render the contact form
   return (
-    <div className='contact'>
-      <h1>Contact Us</h1>
-      <br></br>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <br></br>
-          <br></br>
+    <section id="contact">
+      <Container>
+        <Row>
+          <Col lg={8} className="mx-auto">
+            <h2 className="contact-header">Contact</h2>
+            {messageSent && (
+              <div className="alert alert-success" role="alert">
+                Your message has been sent successfully!
+              </div>
+            )}
+            <Form onSubmit={handleSubmit} noValidate>
+              <Form.Group>
+                <Form.Label htmlFor="name">Name:</Form.Label>
+                <Form.Control
+                  type="text"
+                  className={nameError ? "is-invalid" : ""}
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={handleNameChange}
+                  required
+                />
+                {nameError && (
+                  <div className="invalid-feedback">
+                    Name must be more than 1 character
+                  </div>
+                )}
+                
+                <br></br>
 
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label htmlFor="email">Email:</Form.Label>
 
-        <div className="form-group">
-          <label htmlFor="email">Email Address:</label>
-          <br></br>
-          <br></br>
+                <Form.Control
+                  type="email"
+                  className={emailError ? "is-invalid" : ""}
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  required
+                />
+                
+                {emailError && (
+                  <div className="invalid-feedback">
+                    A valid email is required
+                  </div>
+                )}
+                <br></br>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label htmlFor="message">Message:</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  className={messageError ? "is-invalid" : ""}
+                  id="message"
+                  name="message"
+                  rows="5"
+                  value={message}
+                  onChange={handleMsgChange}
+                />
+                {messageError && (
+                  <div className="invalid-feedback">
+                    Message must be at least 150 characters
+                  </div>
+                )}
+                                <br></br>
 
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <br></br>
-          <br></br>
-
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-
-        {Object.keys(errors).length > 0 && (
-          <div className="error-messages">
-            <h3>Validation Errors:</h3>
-            <ul>
-              {Object.values(errors).map((error, index) => (
-                <li key={index}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+              </Form.Group>
+              <Button type="submit" className="custom-send-message-button">
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
-};
-
+}
+// Export Contact
 export default Contact;
