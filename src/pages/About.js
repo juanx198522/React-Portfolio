@@ -8,8 +8,13 @@ function About() {
             <br></br>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula magna a felis hendrerit, non egestas urna vehicula. Fusce nec libero quis est dictum ultrices. Aenean eget mi a elit iaculis congue. Vivamus tempus libero a augue vulputate eleifend. In hac habitasse platea dictumst. Vivamus nec odio non elit facilisis semper. Cras vehicula libero vel lacus malesuada feugiat. Quisque dapibus scelerisque urna, sed egestas nunc mattis eu. Nullam et nulla nec arcu rhoncus congue. Maecenas vel libero et leo viverra posuere. Duis ut nisi vel urna convallis facilisis.
-                Pellentesque ullamcorper elit id dolor interdum, id fermentum eros tristique. Etiam pharetra purus sit amet arcu vehicula, a facilisis sapien vestibulum. Aliquam erat volutpat. Vestibulum dapibus urna eget elit elementum, ac interdum metus fermentum. Donec dapibus felis sit amet lectus iaculis, at bibendum urna tincidunt. Nulla facilisi. Vestibulum non quam vel felis fermentum lacinia. Sed non sapien eu dolor euismod eleifend a eu felis. Fusce bibendum sed nisl nec bibendum. Proin sodales ligula ac justo convallis dictum. Vivamus euismod lacinia urna, vel feugiat neque luctus eget. Integer interdum eros vel sapien cursus volutpat.
+                As a professional with a diverse background spanning over a decade, I bring a unique blend of skills and experiences to the world of software development. With a strong foundation in restaurant management, where I honed my leadership, team-building, and customer service skills for seven years, followed by three years managing an e-commerce business where I developed a keen eye for data analysis and online customer engagement, I've successfully transitioned into the exciting world of full-stack coding.
+
+                My journey into coding was fueled by a relentless curiosity and a desire to create innovative solutions. Having completed a rigorous full-stack coding boot camp, I've gained proficiency in modern programming languages, web development, and problem-solving. I'm passionate about crafting elegant and efficient code to solve real-world challenges and thrive in dynamic, collaborative environments.
+
+                What sets me apart is my ability to approach coding projects with a fresh perspective, drawing upon my experiences in management and e-commerce to think critically and deliver results. I'm excited to leverage my diverse background to bring a unique perspective to coding projects and contribute to the success of your team.
+
+                In addition to my technical skills, I'm a dedicated learner who thrives on challenges and is committed to staying at the forefront of technology trends. I'm eager to apply my problem-solving abilities, adaptability, and strong work ethic to make meaningful contributions to your organization as a passionate coder.
             </p>
         </div>
     )
