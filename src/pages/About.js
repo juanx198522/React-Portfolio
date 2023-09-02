@@ -1,12 +1,12 @@
 import React from 'react';
 import "../styles/About.css";
 
+// Component for displaying information about the author
 function About() {
     return (
         <div className='about'>
             <h1>About Me</h1>
             <br></br>
-
             <p>
                 As a professional with a diverse background spanning over a decade, I bring a unique blend of skills and experiences to the world of software development. With a strong foundation in restaurant management, where I honed my leadership, team-building, and customer service skills for seven years, followed by three years managing an e-commerce business where I developed a keen eye for data analysis and online customer engagement, I've successfully transitioned into the exciting world of full-stack coding.
 

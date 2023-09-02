@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "../styles/Contact.css";
 
+// Component for displaying a contact form
 function Contact() {
-  // Set initial state for name, email, message, and form errors
+  // State variables for form inputs, error states, and messageSent state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -12,49 +13,53 @@ function Contact() {
   const [messageError, setMessageError] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
 
-  // Handle name input changes
+  // Event handler for name input change
   const handleNameChange = (e) => {
     setName(e.target.value);
     setNameError(false);
   };
 
-  // Handle email input changes
+  // Event handler for email input change
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setEmailError(false);
   };
 
-  // Handle message input changes
+  // Event handler for message input change
   const handleMsgChange = (e) => {
     setMessage(e.target.value);
     setMessageError(false);
   };
 
-  // Validate email format using regex
+  // Function to validate email format
   const validateEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
-  // Handle form submission
+  // Event handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     let valid = true;
 
-    // Validate input fields and set errors if necessary
+    // Validate name
     if (name.length <= 1) {
       setNameError(true);
       valid = false;
     }
+
+    // Validate email format
     if (!validateEmail(email)) {
       setEmailError(true);
       valid = false;
     }
+
+    // Validate message length
     if (message.length < 150) {
       setMessageError(true);
       valid = false;
     }
 
-    // If all fields are valid, log form data and reset inputs
+    // If all validation passes, log the message, reset form, and set messageSent state
     if (valid) {
       console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
       setName("");
@@ -64,18 +69,21 @@ function Contact() {
     }
   };
 
-  // Render the contact form
   return (
     <section id="contact">
       <Container>
         <Row>
           <Col lg={8} className="mx-auto">
-            <h2 className="contact-header">Contact</h2>
+            <h1 className="contact-header">Contact</h1>
+
             {messageSent && (
+              // Display a success message when the message is sent
               <div className="alert alert-success" role="alert">
                 Your message has been sent successfully!
               </div>
             )}
+
+            {/* Contact Form */}
             <Form onSubmit={handleSubmit} noValidate>
               <Form.Group>
                 <Form.Label htmlFor="name">Name:</Form.Label>
@@ -93,13 +101,11 @@ function Contact() {
                     Name must be more than 1 character
                   </div>
                 )}
-                
                 <br></br>
-
               </Form.Group>
+
               <Form.Group>
                 <Form.Label htmlFor="email">Email:</Form.Label>
-
                 <Form.Control
                   type="email"
                   className={emailError ? "is-invalid" : ""}
@@ -109,15 +115,14 @@ function Contact() {
                   onChange={handleEmailChange}
                   required
                 />
-                
                 {emailError && (
                   <div className="invalid-feedback">
                     A valid email is required
                   </div>
                 )}
                 <br></br>
-
               </Form.Group>
+
               <Form.Group>
                 <Form.Label htmlFor="message">Message:</Form.Label>
                 <Form.Control
@@ -134,9 +139,9 @@ function Contact() {
                     Message must be at least 150 characters
                   </div>
                 )}
-                                <br></br>
-
+                <br></br>
               </Form.Group>
+
               <Button type="submit" className="custom-send-message-button">
                 Submit
               </Button>
@@ -147,5 +152,5 @@ function Contact() {
     </section>
   );
 }
-// Export Contact
+
 export default Contact;

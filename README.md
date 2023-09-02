@@ -6,8 +6,10 @@
 - [Acceptance Criteria](#acceptance-criteria)
 - [Mock-Up](#mock-up)
 - [Getting Started](#getting-started)
-- [Projects](#projects)
 - [Design](#design)
+- [Deployed Application Link](#deployed-application-link)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 ## Description
 This React Portfolio is designed to showcase my skills and projects as a web developer. It serves as a platform to share my work, collaborate with other developers, and make a strong impression on potential employers. Using the latest technologies and best practices in web development, this portfolio will set me apart from the competition.
@@ -28,10 +30,10 @@ As an employer looking for candidates with experience in building single-page ap
 - The footer should provide text or icon links to the developer's GitHub and LinkedIn profiles, as well as their profile on a third platform (e.g., Stack Overflow or Twitter).
 
 ## Mock-Up
-![About](mock-up.gif)
-![Portfolio](mock-up.gif)
-![Contact](mock-up.gif)
-![Resume](mock-up.gif)
+![About](../React-Portfolio/src/assets/about.png)
+![Portfolio](../React-Portfolio/src/assets/portfolio.png)
+![Contact](../React-Portfolio/src/assets/contact.png)
+![Resume](../React-Portfolio/src/assets/resume.png)
 
 ## Getting Started
 To build my portfolio, I used `create-react-app` and created the following components:
@@ -55,7 +57,7 @@ To create a polished design for my portfolio, I follow these guidelines:
 - Consider using animations and React component libraries to showcase my skills.
 
 ## Deployed Application Link
-[https://drive.google.com/file/d/1wDL1OHk6qn1iSmKlvpRU8qmbngwHe0aA/view](https://drive.google.com/file/d/1wDL1OHk6qn1iSmKlvpRU8qmbngwHe0aA/view)
+[https://juanx198522.github.io/React-Portfolio/](https://juanx198522.github.io/React-Portfolio/)
 
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or a pull request.

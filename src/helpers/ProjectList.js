@@ -1,44 +1,46 @@
-import Proj1 from '../assets/proj1.jpg';
-import Proj2 from '../assets/proj2.jpg';
-import Proj3 from '../assets/proj3.jpg';
-import Proj4 from '../assets/proj4.jpg';
-import Proj5 from '../assets/proj5.jpeg';
-import Proj6 from '../assets/proj6.jpeg';
+import Proj1 from '../assets/Weather-Dashboard.png';
+import Proj2 from '../assets/Tech-Blog.png';
+import Proj3 from '../assets/Work-Day-Scheduler.png';
+import Proj4 from '../assets/Password-Generator.png';
+import Proj5 from '../assets/Code-Quiz.png';
+import Proj6 from '../assets/Note-Taker.png';
 
+// Array containing information about each project
 export const projectList = [
     {
-        name: "Weather Dashboard",
-        image: Proj1,
-        url: "https://github.com/juanx198522/Weather-Dashboard",
+        name: "Weather Dashboard", // Name of the project
+        image: Proj1, // Image asset for the project
+        gitHubRepo: "https://github.com/juanx198522/Weather-Dashboard", // GitHub repository link
+        deployedApp: "https://juanx198522.github.io/Weather-Dashboard/", // Deployed application link
     },
     {
         name: "Tech Blog",
         image: Proj2,
-        url: "https://github.com/juanx198522/Tech-Blog",
-
+        gitHubRepo: "https://github.com/juanx198522/Tech-Blog",
+        deployedApp: "https://tech-blog-app-2023-c79c738b29bd.herokuapp.com/",
     },
     {
-        name: "Social Network API",
+        name: "Work Day Scheduler",
         image: Proj3,
-        url: "https://github.com/juanx198522/Social-Network-API",
-
+        gitHubRepo: "https://github.com/juanx198522/Third-Party-APIs-Work-Day-Scheduler",
+        deployedApp: "https://juanx198522.github.io/Third-Party-APIs-Work-Day-Scheduler/",
     },
     {
-        name: "E-Commerce Back End",
+        name: "Password Generator",
         image: Proj4,
-        url: "https://github.com/juanx198522/E-Commerce-Back-End",
-
+        gitHubRepo: "https://github.com/juanx198522/03-challenge",
+        deployedApp: "https://juanx198522.github.io/03-challenge/",
     },
     {
-        name: "Employee Tracker",
+        name: "Code Quiz",
         image: Proj5,
-        url: "https://github.com/juanx198522/Employee-Tracker",
-
+        gitHubRepo: "https://github.com/juanx198522/04-challenge",
+        deployedApp: "https://juanx198522.github.io/04-challenge/",
     },
     {
         name: "Note Taker",
         image: Proj6,
-        url: "https://github.com/juanx198522/Note-Taker",
-
+        gitHubRepo: "https://github.com/juanx198522/Note-Taker",
+        deployedApp: "https://note-taker-11-a2cc57ffa002.herokuapp.com/",
     },
 ];
