@@ -30,10 +30,10 @@ As an employer looking for candidates with experience in building single-page ap
 - The footer should provide text or icon links to the developer's GitHub and LinkedIn profiles, as well as their profile on a third platform (e.g., Stack Overflow or Twitter).
 
 ## Mock-Up
-![About](../React-Portfolio/src/assets/about.png)
-![Portfolio](../React-Portfolio/src/assets/portfolio.png)
-![Contact](../React-Portfolio/src/assets/contact.png)
-![Resume](../React-Portfolio/src/assets/resume.png)
+![About](./src/assets/About.png)
+![Portfolio](./src/assets/Portfolio.png)
+![Contact](./src/assets/Contact.png)
+![Resume](./src/assets/Resume.png)
 
 ## Getting Started
 To build my portfolio, I used `create-react-app` and created the following components:
