@@ -3,10 +3,6 @@ import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import emailjs from 'emailjs-com';
 
-const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
-const EMAILJS_USER_ID = process.env.EMAILJS_USER_ID;
-
 const Contact = () => {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -29,13 +25,13 @@ const Contact = () => {
     } else if (!emailValidation(email)) {
       setErrMsg("Please provide a valid email address");
     } else {
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      emailjs.send('service_ske2w43', 'template_tz4y1rp', {
         email: email,
         subject: subject,
         message: message,
         username: username,
         phoneNumber: phoneNumber,
-      }, EMAILJS_USER_ID)
+      }, 'gRHctncCawKxm69QA')
         .then((response) => {
           setSuccessMsg(`Thank you ${username}, your message has been sent successfully!`);
           setErrMsg("");

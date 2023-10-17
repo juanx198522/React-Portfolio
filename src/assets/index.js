@@ -1,4 +1,4 @@
-import me from "./images/bannerImg.png";
+import me from "./images/me.png";
 import projectOne from "./images/projects/WeatherDashboard.jpg";
 import projectTwo from "./images/projects/TechBlog.jpg";
 import projectThree from "./images/projects/WorkDayScheduler.jpg";
