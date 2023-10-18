@@ -37,7 +37,7 @@ const Projects = () => {
           skills="Skills: HTML, CSS, jQuery"
           src={projectThree}
           githubLink="https://github.com/juanx198522/Work-Day-Scheduler"
-          deployAppLink="https://juanx198522.github.io/Third-Party-APIs-Work-Day-Scheduler/"
+          deployAppLink="https://juanx198522.github.io/Work-Day-Scheduler/"
         />
         <ProjectsCard
           title="Password Generator"
@@ -45,7 +45,7 @@ const Projects = () => {
           skills="Skills: HTML, CSS, JavaScript"
           src={projectFour}
           githubLink="https://github.com/juanx198522/Password-Generator"
-          deployAppLink="https://juanx198522.github.io/03-challenge/"
+          deployAppLink="https://juanx198522.github.io/Password-Generator/"
         />
         <ProjectsCard
           title="Note Taker"
