@@ -1,5 +1,6 @@
 import React from 'react';
 import { me } from "../../assets/index";
+import './about.css';
 
 const RightBanner = () => {
   return (
