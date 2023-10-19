@@ -26,7 +26,7 @@ const Projects = () => {
         <ProjectsCard
           title="Text Editor"
           des="The application will meet the PWA criteria, provide data persistence through IndexedDB, and function offline."
-          skills="Skills: IndexedDB, Webpack, Workbox"
+          skills="Skills: Webpack, Workbox, IndexedDB"
           src={projectSeven}
           githubLink="https://github.com/juanx198522/Text-Editor"
           deployAppLink="https://pwa-text-editor-2023-c07a9bda4f60.herokuapp.com/"
