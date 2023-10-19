@@ -5,6 +5,7 @@ import projectThree from "./images/projects/WorkDayScheduler.jpg";
 import projectFour from "./images/projects/PasswordGenerator.jpg";
 import projectFive from "./images/projects/NoteTaker.jpg";
 import projectSix from "./images/projects/MyWorkoutPal.jpg";
+import projectSeven from "./images/projects/TextEditor.jpg";
 import resume from "./images/projects/JuanCruzGarciaResume.pdf";
 
 
@@ -16,5 +17,6 @@ export {
   projectFour,
   projectFive,
   projectSix,
+  projectSeven,
   resume
 };

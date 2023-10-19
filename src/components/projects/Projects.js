@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../layouts/Title';
-import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -24,13 +24,21 @@ const Projects = () => {
           deployAppLink="https://juanx198522.github.io/Weather-Dashboard/"
         />
         <ProjectsCard
+          title="Text Editor"
+          des="The application will meet the PWA criteria, provide data persistence through IndexedDB, and function offline."
+          skills="Skills: IndexedDB, Webpack, Workbox"
+          src={projectSeven}
+          githubLink="https://github.com/juanx198522/Text-Editor"
+          deployAppLink="https://pwa-text-editor-2023-c07a9bda4f60.herokuapp.com/"
+        />
+        {/* <ProjectsCard
           title="Tech Blog"
           des="A CMS-style blog site following the MVC structure with Handlebars, Sequelize, and express-session for authentication."
           skills="Skills: MVC, Handlebars, Sequelize"
           src={projectTwo}
           githubLink="https://github.com/juanx198522/Tech-Blog"
           deployAppLink="https://tech-blog-app-2023-c79c738b29bd.herokuapp.com/"
-        />
+        /> */}
         <ProjectsCard
           title="Work Day Scheduler"
           des="A simple calendar application that allows a user to save events for each hour of a typical working day (9am–5pm)."
