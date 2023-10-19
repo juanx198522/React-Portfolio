@@ -12,6 +12,7 @@ const About = () => {
       <RightAbout />
     </section>
   );
+  
 }
 
 export default About;
