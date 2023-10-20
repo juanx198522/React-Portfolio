@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.6402d1f0.css",
-    "main.js": "/React-Portfolio/static/js/main.310d313a.js",
+    "main.css": "/React-Portfolio/static/css/main.99525d25.css",
+    "main.js": "/React-Portfolio/static/js/main.3e815d5c.js",
     "static/media/me.png": "/React-Portfolio/static/media/me.eb1a73b4c28d59066eed.png",
     "static/media/MyWorkoutPal.jpg": "/React-Portfolio/static/media/MyWorkoutPal.6bbcdbe584ec062f101d.jpg",
+    "static/media/TextEditor.jpg": "/React-Portfolio/static/media/TextEditor.bf072af7d2054fcc8662.jpg",
     "static/media/PasswordGenerator.jpg": "/React-Portfolio/static/media/PasswordGenerator.82580b7e577ce3e54e17.jpg",
     "static/media/WorkDayScheduler.jpg": "/React-Portfolio/static/media/WorkDayScheduler.320de34412c6762c7716.jpg",
     "static/media/TechBlog.jpg": "/React-Portfolio/static/media/TechBlog.78ab058ab3a74ddf8a2d.jpg",
@@ -11,11 +12,11 @@
     "static/media/WeatherDashboard.jpg": "/React-Portfolio/static/media/WeatherDashboard.522c2b667607a3c5c3a6.jpg",
     "static/media/JuanCruzGarciaResume.pdf": "/React-Portfolio/static/media/JuanCruzGarciaResume.94fe14b05b1c442e0e80.pdf",
     "index.html": "/React-Portfolio/index.html",
-    "main.6402d1f0.css.map": "/React-Portfolio/static/css/main.6402d1f0.css.map",
-    "main.310d313a.js.map": "/React-Portfolio/static/js/main.310d313a.js.map"
+    "main.99525d25.css.map": "/React-Portfolio/static/css/main.99525d25.css.map",
+    "main.3e815d5c.js.map": "/React-Portfolio/static/js/main.3e815d5c.js.map"
   },
   "entrypoints": [
-    "static/css/main.6402d1f0.css",
-    "static/js/main.310d313a.js"
+    "static/css/main.99525d25.css",
+    "static/js/main.3e815d5c.js"
   ]
 }
